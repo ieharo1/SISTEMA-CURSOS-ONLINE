@@ -1,0 +1,64 @@
+﻿@page
+@model Demo02.Pages.Productos.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>producto</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="producto.nombre" class="control-label"></label>
+                <input asp-for="producto.nombre" class="form-control" />
+                <span asp-validation-for="producto.nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="producto.pvp" class="control-label"></label>
+                <input asp-for="producto.pvp" class="form-control" />
+                <span asp-validation-for="producto.pvp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="producto.stock" class="control-label"></label>
+                <input asp-for="producto.stock" class="form-control" />
+                <span asp-validation-for="producto.stock" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="producto.categoria" class="control-label"></label>
+                <input asp-for="producto.categoria" class="form-control" />
+                <span asp-validation-for="producto.categoria" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="producto.fecha_elaboracion" class="control-label"></label>
+                <input asp-for="producto.fecha_elaboracion" class="form-control" />
+                <span asp-validation-for="producto.fecha_elaboracion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="producto.fecha_caducidad" class="control-label"></label>
+                <input asp-for="producto.fecha_caducidad" class="form-control" />
+                <span asp-validation-for="producto.fecha_caducidad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="producto.descripcion" class="control-label"></label>
+                <input asp-for="producto.descripcion" class="form-control" />
+                <span asp-validation-for="producto.descripcion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
